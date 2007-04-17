@@ -1,5 +1,5 @@
 %define name liboobs
-%define version 2.18.0
+%define version 2.18.1
 %define release %mkrel 1
 %define major 3
 %define libname %mklibname oobs-1_ %major
@@ -78,5 +78,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) %_libdir/liboobs-1.la
 %_libdir/liboobs-1.so
 %_libdir/pkgconfig/liboobs-1.pc
-
-
