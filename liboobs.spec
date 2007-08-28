@@ -1,8 +1,9 @@
 %define name liboobs
-%define version 2.19.0
+%define version 2.19.91
 %define release %mkrel 1
 %define major 3
 %define libname %mklibname oobs-1_ %major
+%define libnamedev %mklibname -d oobs-1
 
 Summary: System configuration backend library
 Name: %{name}
@@ -33,13 +34,14 @@ provide easy to access GObjects to system configuration details, like
 users, groups and network interfaces, it will handle sessions with the
 backend and data consistency too.
 
-%package -n %libname-devel
+%package -n %libnamedev
 Group: Development/C
 Summary: Header files of the system configuration backend library
 Requires: %libname = %version
 Provides: %name-devel = %version-%release
+Obsoletes: %mklibname -d oobs-1_ 3
 
-%description -n %libname-devel
+%description -n %libnamedev
 Liboobs is a wrapping library to the System Tools Backends, it will
 provide easy to access GObjects to system configuration details, like
 users, groups and network interfaces, it will handle sessions with the
@@ -70,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README ChangeLog
 %_libdir/liboobs-1.so.%{major}*
 
-%files -n %libname-devel
+%files -n %libnamedev
 %defattr(-,root,root)
 %_datadir/gtk-doc/html/liboobs
 %_includedir/liboobs-1.0/
