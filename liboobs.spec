@@ -15,6 +15,7 @@ Group: System/Libraries
 Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: dbus-glib-devel
+BuildRequires: libhal-devel
 BuildRequires: system-tools-backends2 >= 2.1.2
 BuildRequires: gtk-doc
 
