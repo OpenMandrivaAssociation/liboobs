@@ -1,5 +1,5 @@
 %define name liboobs
-%define version 2.21.2.1
+%define version 2.21.3
 %define release %mkrel 1
 %define major 4
 %define libname %mklibname oobs-1_ %major
@@ -15,7 +15,7 @@ Group: System/Libraries
 Url: http://www.gnome.org
 BuildRequires: dbus-glib-devel
 BuildRequires: libhal-devel
-BuildRequires: system-tools-backends2 >= 2.5.2
+BuildRequires: system-tools-backends2 >= 2.5.4
 BuildRequires: gtk-doc
 
 %description
