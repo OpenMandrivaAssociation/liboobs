@@ -1,6 +1,6 @@
 %define name liboobs
 %define version 2.22.0
-%define release %mkrel 3
+%define release %mkrel 4
 %define major 4
 %define libname %mklibname oobs-1_ %major
 %define libnamedev %mklibname -d oobs-1
@@ -10,7 +10,8 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/liboobs/%{name}-%{version}.tar.bz2
-License: GPL
+Patch: liboobs-2.22.0-format-strings.patch
+License: LGPLv2+
 Group: System/Libraries
 Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -51,6 +52,7 @@ backend and data consistency too.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x 
