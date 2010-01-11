@@ -1,6 +1,6 @@
 %define name liboobs
 %define version 2.29.2
-%define release %mkrel 1
+%define release %mkrel 2
 %define major 4
 %define libname %mklibname oobs-1_ %major
 %define libnamedev %mklibname -d oobs-1
@@ -11,6 +11,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/liboobs/%{name}-%{version}.tar.bz2
 Patch: liboobs-2.22.2-format-strings.patch
+Patch1: liboobs-2.29.2-fix-header-installation.patch
 License: LGPLv2+
 Group: System/Libraries
 Url: http://www.gnome.org
@@ -53,6 +54,8 @@ backend and data consistency too.
 %prep
 %setup -q
 %patch -p1
+%patch1 -p1
+autoreconf -fi
 
 %build
 %configure2_5x  --enable-gtk-doc
@@ -63,6 +66,7 @@ backend and data consistency too.
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
