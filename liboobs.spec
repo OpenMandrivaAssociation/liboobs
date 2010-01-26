@@ -1,5 +1,5 @@
 %define name liboobs
-%define version 2.29.2.1
+%define version 2.29.3
 %define release %mkrel 1
 %define major 4
 %define libname %mklibname oobs-1_ %major
@@ -56,7 +56,8 @@ backend and data consistency too.
 
 %build
 %configure2_5x  --enable-gtk-doc
-%make
+#gw parallel build broken in 2.29.3
+make
 
 
 %install
