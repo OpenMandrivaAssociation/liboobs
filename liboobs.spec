@@ -1,5 +1,5 @@
 %define name liboobs
-%define version 2.29.3
+%define version 2.29.90
 %define release %mkrel 1
 %define major 4
 %define libname %mklibname oobs-1_ %major
@@ -17,7 +17,7 @@ Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: dbus-glib-devel
 BuildRequires: libhal-devel
-BuildRequires: system-tools-backends2 >= 2.9.0
+BuildRequires: system-tools-backends2 >= 2.9.2
 BuildRequires: gtk-doc
 
 %description
