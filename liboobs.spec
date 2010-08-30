@@ -1,7 +1,7 @@
 %define name liboobs
-%define version 2.31.1
+%define version 2.31.91
 %define release %mkrel 1
-%define major 4
+%define major 5
 %define libname %mklibname oobs-1_ %major
 %define libnamedev %mklibname -d oobs-1
 
