@@ -12,9 +12,9 @@ Url:		http://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/%{name}-%{version}.tar.bz2
 Patch0:		liboobs-2.22.2-format-strings.patch
 
-BuildRequires: gtk-doc
-BuildRequires: pkgconfig(dbus-glib-1)
-BuildRequires: pkgconfig(system-tools-backends-2)
+BuildRequires:	gtk-doc
+BuildRequires:	pkgconfig(dbus-glib-1)
+BuildRequires:	pkgconfig(system-tools-backends-2)
 
 %description
 Liboobs is a wrapping library to the System Tools Backends, it will
@@ -30,7 +30,7 @@ Summary:	System configuration backend shared library
 This package contains the shared library for %{name}.
 
 %package -n %{devname}
-Group		Development/C
+Group:		Development/C
 Summary:	Header files of the system configuration backend library
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
