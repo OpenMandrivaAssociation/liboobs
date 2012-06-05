@@ -14,7 +14,7 @@ Patch0:		liboobs-2.22.2-format-strings.patch
 
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(dbus-glib-1)
-BuildRequires:	pkgconfig(system-tools-backends-2)
+BuildRequires:	pkgconfig(system-tools-backends-2.0)
 
 %description
 Liboobs is a wrapping library to the System Tools Backends, it will
