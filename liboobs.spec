@@ -43,7 +43,8 @@ This package contains the development files for %{name}.
 %apply_patches
 
 %build
-%configure2_5x \
+autoreconf -fi
+%configure \
 	--disable-static \
 	--enable-gtk-doc
 
