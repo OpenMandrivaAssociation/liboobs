@@ -47,7 +47,7 @@ This package contains the development files for %{name}.
 	--disable-static \
 	--enable-gtk-doc
 
-%make LIBS='-lgobject-2.0'
+%make LIBS='-lgobject-2.0 -lglib-2.0'
 
 %install
 %makeinstall_std
