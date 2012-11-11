@@ -1,0 +1,12 @@
+diff -p -up liboobs-2.22.2/oobs/oobs-ifacesconfig.c~ liboobs-2.22.2/oobs/oobs-ifacesconfig.c
+--- liboobs-2.22.2/oobs/oobs-ifacesconfig.c~	2009-09-05 16:41:13.000000000 +0200
++++ liboobs-2.22.2/oobs/oobs-ifacesconfig.c	2009-09-10 20:03:36.000000000 +0200
+@@ -226,7 +226,7 @@ init_hal_context (OobsIfacesConfig *conf
+ 
+   if (dbus_error_is_set (&error))
+     {
+-      g_warning (error.message);
++      g_warning ("%s", error.message);
+       return;
+     }
+ 
