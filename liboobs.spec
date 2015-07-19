@@ -5,7 +5,7 @@
 Summary:	System configuration backend library
 Name:		liboobs
 Version:	2.32.0
-Release:	4
+Release:	5
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org
