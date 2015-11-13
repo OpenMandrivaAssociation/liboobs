@@ -4,12 +4,12 @@
 
 Summary:	System configuration backend library
 Name:		liboobs
-Version:	2.32.0
-Release:	5
+Version:	3.0.0
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.gnome.org
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.bz2
 Patch0:		liboobs-2.22.2-format-strings.patch
 
 BuildRequires:	gtk-doc
@@ -21,6 +21,8 @@ Liboobs is a wrapping library to the System Tools Backends, it will
 provide easy to access GObjects to system configuration details, like
 users, groups and network interfaces, it will handle sessions with the
 backend and data consistency too.
+
+It is used by LXQt.
 
 %package -n %{libname}
 Group:		System/Libraries
