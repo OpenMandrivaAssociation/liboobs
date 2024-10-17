@@ -8,7 +8,7 @@ Version:	3.0.0
 Release:	6
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://www.gnome.org
+Url:		https://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.bz2
 Patch0:		liboobs-2.22.2-format-strings.patch
 
